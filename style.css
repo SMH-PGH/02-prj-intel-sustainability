@@ -36,12 +36,15 @@ section{
   color:#00C7FD;
   max-width:220px;
   border:double;
+  margin-top:10px;
+  p{
+    font-size:15px;
+  }
 }
 section:hover{
   background-color:#0362ab;
   color: #03bef2;
   p{
-    font-size:15px;
     opacity:1;
   }
 }
