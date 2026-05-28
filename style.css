@@ -5,8 +5,23 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.time{
+  width:100px;
+  height:100px;
+}
 body{
   background-color:navy;
+}
+.container{
+  display:flex;
+  flex-wrap:nowrap;
+  gap: 20px;
+  overflow-x:auto;
+  padding:10px;
+  justify-content:flex-start;
+  max-width:810px;
+  margin:0 auto;
+  scroll-snap-type: x mandatory;
 }
 header{
   font-size:25px;
@@ -31,25 +46,43 @@ p {
   text-align:center;
   font-size:20px;
 }
-section{
+section {
   background-color: #0071C5;
   color:#00C7FD;
    gap: 20px;
-   max-width:220px;
+   max-width:250px;
+   min-width:250px;
   border:double;
   margin-top:10px;
-  p{
-    font-size:15px;
-  }
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  flex: 0 0 250px;
 }
 section:hover{
   background-color:#0362ab;
   color: #03bef2;
+  transform:scale(1.05);
   p{
     opacity:1;
-    
   }
 }
 section p{
   opacity:0;
+  font-size:15px;
+}
+@media  (max-width:600px){
+  .container{
+    flex-direction: column;
+    max-width:100%;
+    width:100%;
+    margin-bottom:10px;
+    align-items:center;
+  }
+  p{
+    text-align:center;
+    padding-left:10px;
+  }
+  header{
+    padding-left:10px;
+  }
 }
